@@ -1,0 +1,44 @@
+---
+marksync:
+  uuid: 019f5a2c-4a59-77aa-96ad-70f3719c2d1e
+---
+
+# Hello World from MarkSync
+
+This page was published automatically by **MarkSync for Confluence** — a CLI tool that synchronizes Git-tracked Markdown to Confluence Cloud.
+
+## Why MarkSync?
+
+- **Git as source of truth** — your docs live in Git, with full history and code review
+- **Deterministic** — same input always produces the same Confluence output
+- **Safe** — content-hash dedup, version-conflict detection, no silent overwrites
+- **Auditable** — every page carries provenance (commit SHA, sync timestamp)
+
+## Code Example
+
+```typescript
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+```
+
+## Team Status
+
+| Member | Role | Status |
+|--------|------|--------|
+| Alice | Tech Lead | Active |
+| Bob | Engineer | Active |
+| Carol | Designer | On leave |
+
+## Architecture Diagram (Mermaid)
+
+```mermaid
+graph LR
+    A[Git Repo] -->|marksync sync| B(MarkSync CLI)
+    B -->|Storage XHTML| C[Confluence Cloud]
+    B -->|content hash| D[(Lock File)]
+```
+
+---
+
+*This page is part of the MarkSync demo.*

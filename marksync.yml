@@ -1,0 +1,34 @@
+version: 1
+
+root: docs/
+
+select:
+  - docs/**/*.md
+
+hierarchy: mirror
+
+targets:
+  default:
+    type: confluence
+    spaceKey: marksyncte
+    parentPageId: "39223464"
+
+sync:
+  allowBranches:
+    - main
+  granularity: squash
+  stalePlanMinutes: 15
+
+render:
+  mermaid:
+    policy: code
+    securityLevel: strict
+    htmlLabels: false
+    deterministicIds: true
+
+output:
+  format: storage
+  color: auto
+
+provenance:
+  visiblePanel: true
