@@ -1,0 +1,30 @@
+version: 1
+targets:
+  default:
+    documents:
+      019f5a2c-4a59-77aa-96ad-70f3719c2d1e:
+        sourcePath: docs/hello-world.md
+        pageId: "43483139"
+        parentPageId: "39223464"
+        pageVersion: 1
+        sourceCommit: d2f3d1345da3e08736f25a76a91f245ae9f012f4
+        sourceContentHash: sha256:281fa7a352a7fa51ff65d04b27bd24476f66c8d9ed78d0af01d3e9790aa17581
+        renderedBodyHash: ee797765fc884de3eb7065a39324abfe757f370ab72010cb8db8a4f2e1b5b3fb
+        remoteBodyHash: ee797765fc884de3eb7065a39324abfe757f370ab72010cb8db8a4f2e1b5b3fb
+        attachmentHashes: {}
+        operationId: op_019f5a35-c904-759e-8f1d-c2c4ffb6bf7d
+        synchronizedAt: 2026-07-13T06:41:43.751Z
+        toolVersion: 0.4.1
+      019f5a2c-4a89-725f-aa59-9015713a0354:
+        sourcePath: docs/team-guide.md
+        pageId: "43679747"
+        parentPageId: "39223464"
+        pageVersion: 1
+        sourceCommit: d2f3d1345da3e08736f25a76a91f245ae9f012f4
+        sourceContentHash: sha256:ef3a13a8d0493d0fa6220297264dce2cf94ce042a92107fc0ea926e4fe503e1a
+        renderedBodyHash: f195c0f9eed22f8c985990789194919c400986c91b459d5c23ee85b3b88e51a3
+        remoteBodyHash: f195c0f9eed22f8c985990789194919c400986c91b459d5c23ee85b3b88e51a3
+        attachmentHashes: {}
+        operationId: op_019f5a35-c904-759e-8f1d-c2c4ffb6bf7d
+        synchronizedAt: 2026-07-13T06:41:44.975Z
+        toolVersion: 0.4.1
