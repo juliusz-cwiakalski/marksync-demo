@@ -10,7 +10,7 @@ hierarchy: mirror
 targets:
   default:
     type: confluence
-    spaceKey: marksyncte
+    spaceKey: "39223300"
     parentPageId: "39223464"
 
 sync:
