@@ -57,3 +57,11 @@ This section was added **after the initial publish** to demonstrate the update f
 | Conflict detection | version-aware |
 
 > **Note:** MarkSync detects unchanged content and skips unnecessary updates (NoOp).
+
+## 🔄 Live Update
+
+**Last synced:** 2026-07-13 08:58:25 CEST
+
+This section is automatically updated by `demo.sh` to demonstrate the
+marksync update flow. Each run produces a new page version on Confluence.
+
