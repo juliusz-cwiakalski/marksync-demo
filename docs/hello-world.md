@@ -77,3 +77,8 @@ Testing update flow with GH-62+GH-66 fixes.
 
 ## Updated Section (22:16:26)
 This content was added to demonstrate the update flow.
+
+## Live Update Section
+
+**Updated:** This content was added to demonstrate the update flow.
+MarkSync detects content changes and updates the Confluence page version.
