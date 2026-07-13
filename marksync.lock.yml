@@ -30,3 +30,16 @@ targets:
         operationId: op_019f5d1f-8578-75db-9cef-671c3a0019c4
         synchronizedAt: 2026-07-13T20:16:19.834Z
         toolVersion: 0.4.1
+      019f5d1f-e1ea-76ce-9417-c367ce958171:
+        sourcePath: docs/new-feature.md
+        pageId: "45154305"
+        parentPageId: "39223464"
+        pageVersion: 1
+        sourceCommit: 380189ed82621078275835c2d6ee2c873dd891ec
+        sourceContentHash: sha256:37c8b1ed90a89c66c6b7ba9c103a4dc511c986162716a27000f47801566ba705
+        renderedBodyHash: ba20981c863a698855fbebaa75d6f1ffadb104bf85e283f6df011baebe1d2578
+        remoteBodyHash: sha256:16f79594da3ddad1becba66e97174c160aa010517f8afa5bf19db9a4b0eb76b5
+        attachmentHashes: {}
+        operationId: op_019f5d1f-ee4b-751c-9566-380370b63f95
+        synchronizedAt: 2026-07-13T20:16:42.692Z
+        toolVersion: 0.4.1
