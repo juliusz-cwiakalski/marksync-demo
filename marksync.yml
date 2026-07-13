@@ -3,7 +3,7 @@ version: 1
 root: docs/
 
 select:
-  - docs/
+  - docs/**/*.md
 
 hierarchy: mirror
 
