@@ -42,3 +42,18 @@ graph LR
 ---
 
 *This page is part of the MarkSync demo.*
+
+## Update: Live Demo Section
+
+This section was added **after the initial publish** to demonstrate the update flow.
+
+### Key Metrics
+
+| Metric | Value |
+|--------|-------|
+| Pages synced | 2 |
+| Sync latency | < 2s |
+| Content hash | sha256-based |
+| Conflict detection | version-aware |
+
+> **Note:** MarkSync detects unchanged content and skips unnecessary updates (NoOp).
