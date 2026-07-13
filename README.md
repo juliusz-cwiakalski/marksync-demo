@@ -7,9 +7,11 @@ deterministically, safely, and with a clear audit trail.
 ## What this demo shows
 
 1. **Publish** — `marksync sync` creates Confluence pages from Markdown files
-2. **Update** — edit Markdown locally, re-sync, Confluence pages update
+2. **Update** — edit Markdown locally, re-sync, Confluence pages update (version bumped)
 3. **No-op detection** — unchanged files are skipped (no unnecessary writes)
-4. **Lock file** — a committed `marksync.lock.yml` tracks page bindings
+4. **New pages** — add a new `.md` file, sync, and a new page appears on Confluence
+5. **Mermaid diagrams** — Mermaid code blocks are rendered to SVG images via Kroki API
+6. **Lock file** — a committed `marksync.lock.yml` tracks page bindings
 
 ## Prerequisites
 
@@ -131,13 +133,22 @@ bun "$MARKSYNC_SRC/src/cli/index.ts" sync
 Each file has a `marksync.uuid` in YAML front-matter — this is the stable
 identity that binds a Markdown file to a Confluence page across syncs.
 
-## The lock file (`marksync.lock.yml`)
+## The lock file (`marksync.lock.yml`) — CRITICAL
 
 After the first sync, a `marksync.lock.yml` appears in the repo root. This is
 the **committed shared base** — it tracks which Markdown UUID maps to which
 Confluence page ID, along with content hashes and version numbers.
 
-**Always commit the lock file** — it enables the team to share sync state.
+> **⚠️ ALWAYS commit the lock file after every sync.** Without the committed
+> lock, marksync cannot detect existing pages and will try to create duplicates
+> (which Confluence rejects with "title already exists"). The typical workflow
+> is:
+>
+> ```bash
+> bun $MARKSYNC_SRC/src/cli/index.ts sync   # publish changes
+> git add marksync.lock.yml                  # stage the updated lock
+> git commit -m "sync: update pages"         # commit it
+> ```
 
 ## Troubleshooting
 
