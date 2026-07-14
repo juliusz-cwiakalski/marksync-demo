@@ -3,7 +3,7 @@ marksync:
   uuid: 019f5a2c-4a59-77aa-96ad-70f3719c2d1e
 ---
 
-# Hello World from MarkSync
+# Hello World from MarkSync - demo update
 
 This page was published automatically by **MarkSync for Confluence** — a CLI tool that synchronizes Git-tracked Markdown
 to Confluence Cloud.

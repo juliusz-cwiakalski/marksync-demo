@@ -18,9 +18,25 @@
 
 set -euo pipefail
 
-MARKSYNC_SRC="${MARKSYNC_SRC:-$(realpath ../marksync-for-confluence)}"
 DEMO_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$DEMO_DIR"
+
+# Determine MARKSYNC_SRC:
+# 1. Honor environment variable if set
+# 2. Prefer ../marksync-for-confluence if it exists
+# 3. Otherwise try ../marksync
+# 4. As a last resort fall back to ../marksync-for-confluence (keeps previous behaviour)
+if [ -n "${MARKSYNC_SRC:-}" ]; then
+    # use provided value
+    :
+elif [ -d "../marksync-for-confluence" ]; then
+    MARKSYNC_SRC="$(realpath ../marksync-for-confluence)"
+elif [ -d "../marksync" ]; then
+    MARKSYNC_SRC="$(realpath ../marksync)"
+else
+    # best-effort: don't let realpath failures (non-zero) abort the script
+    MARKSYNC_SRC="$(realpath ../marksync-for-confluence 2>/dev/null || realpath ../marksync 2>/dev/null || echo ../marksync-for-confluence)"
+fi
 
 # ─── Colors ───
 G='\033[0;32m'   # green
