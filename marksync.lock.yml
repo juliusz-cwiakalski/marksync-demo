@@ -6,11 +6,11 @@ targets:
         sourcePath: docs/hello-world.md
         pageId: "45088775"
         parentPageId: "39223464"
-        pageVersion: 16
-        sourceCommit: 4f60701b88c40970dcdfb1c027509c3354a8ce8a
+        pageVersion: 17
+        sourceCommit: 58dce0cf66ddb2ca4c52d00b2b6703d523e6c03b
         sourceContentHash: sha256:8ddc61796dbcab48f3964960d89ad1c080f07affbf8df50a8280753e7dc9c8f3
-        renderedBodyHash: f51c0edf6160b3bb786887e64ab93c654d54248262fdcc63bd75acf733fa16fa
-        remoteBodyHash: sha256:deb39dc5ae27ce9d14ce8947ac269054baa896d03e8572304b223a0eb2239f4b
+        renderedBodyHash: d38e8dc502bda9c4208591085b2d3c90a4e0c8310811a1c44e51a320156cfe88
+        remoteBodyHash: sha256:43e35cf42cae8bf964030af868e18f5ca5d5e55a7b7d86eb981876721a1c1d43
         attachmentHashes:
           marksync-mermaid-528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb.svg: 528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb
           marksync-mermaid-246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49.svg: 246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49
@@ -24,8 +24,10 @@ targets:
           marksync-mermaid-6aa8d859389be25e44262451779288df197722de9ec40632ba2203f09c511eab.svg: 6aa8d859389be25e44262451779288df197722de9ec40632ba2203f09c511eab
           marksync-mermaid-7e473d9b906c71796b09170778aace6963d63431d803731dfdc08af6b110775c.svg: 7e473d9b906c71796b09170778aace6963d63431d803731dfdc08af6b110775c
           marksync-mermaid-69da142c78d256dc16215874f7330dd39702c574193cd0699367ee27588c2273.svg: 69da142c78d256dc16215874f7330dd39702c574193cd0699367ee27588c2273
-        operationId: op_019f5f30-24c6-77e0-a4ae-7955a3d018a8
-        synchronizedAt: 2026-07-14T05:53:43.802Z
+          marksync-mermaid-1df4124250b205a043c3fc42802352c39bd6a650bdcf291a5a0026608ae179f7.svg: 1df4124250b205a043c3fc42802352c39bd6a650bdcf291a5a0026608ae179f7
+          marksync-mermaid-9d5f916f8951391869e40608d24c6e2c416f964bc5190ff7d0e84d1d8ac25983.svg: 9d5f916f8951391869e40608d24c6e2c416f964bc5190ff7d0e84d1d8ac25983
+        operationId: op_019f5f31-45d3-7066-97a9-3ba768162b59
+        synchronizedAt: 2026-07-14T05:54:57.646Z
         toolVersion: 0.4.1
       019f5a2c-4a89-725f-aa59-9015713a0354:
         sourcePath: docs/team-guide.md
