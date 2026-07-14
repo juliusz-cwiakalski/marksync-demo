@@ -15,37 +15,6 @@ to Confluence Cloud.
 - **Safe** — content-hash dedup, version-conflict detection, no silent overwrites
 - **Auditable** — every page carries provenance (commit SHA, sync timestamp)
 
----
-
-* [Hello World from MarkSync](#hello-world-from-marksync)
-  * [Why MarkSync?](#why-marksync)
-  * [Code Example](#code-example)
-  * [Team Status](#team-status)
-  * [Architecture Diagram (Mermaid)](#architecture-diagram-mermaid)
-  * [mermaid kitchen sink](#mermaid-kitchen-sink)
-    * [Class Diagram](#class-diagram)
-    * [Gantt Diagram](#gantt-diagram)
-    * [Mindmap Diagram](#mindmap-diagram)
-    * [State Diagram](#state-diagram)
-    * [Timeline Diagram](#timeline-diagram)
-    * [Sequence Diagram](#sequence-diagram)
-    * [Git Graph Diagram](#git-graph-diagram)
-    * [Entity Relationship Diagram](#entity-relationship-diagram)
-    * [User Journey Diagram](#user-journey-diagram)
-    * [Pie Chart](#pie-chart)
-    * [Quadrant Chart](#quadrant-chart)
-    * [Requirement Diagram](#requirement-diagram)
-  * [Update: Live Demo Section](#update-live-demo-section)
-    * [Key Metrics](#key-metrics)
-  * [🔄 Live Update](#-live-update)
-  * [Update Test 13:24:30](#update-test-132430)
-  * [Update Test 13:26:41](#update-test-132641)
-  * [Update 16:42:33](#update-164233)
-  * [Updated Section (22:16:26)](#updated-section-221626)
-  * [Live Update Section](#live-update-section)
-  * [Manual update 2026-07-14](#manual-update-2026-07-14)
-  * [Testing tables](#testing-tables)
-
 ## Code Example
 
 ```typescript
