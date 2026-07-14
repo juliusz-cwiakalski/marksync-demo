@@ -40,6 +40,32 @@ graph LR
     B -->|content hash| D[(Lock File)]
 ```
 
+## Advanced Sync Flow (Mermaid)
+
+```mermaid
+flowchart TD
+    DEV[Developer commits docs] --> CI[CI pipeline]
+    CI --> LINT{Markdown valid?}
+    LINT -- No --> FAIL[Fail build and report errors]
+    LINT -- Yes --> MS[Run marksync sync]
+
+    subgraph MarkSync Engine
+        PARSE[Parse Markdown] --> RENDER[Render Confluence XHTML]
+        RENDER --> HASH[Compute content hash]
+        HASH --> DIFF{Hash changed?}
+        DIFF -- No --> NOOP[Skip update (NoOp)]
+        DIFF -- Yes --> UPDATE[Update page via API]
+        UPDATE --> LOCK[Write lock metadata]
+    end
+
+    MS --> PARSE
+    LOCK --> AUDIT[(Audit trail)]
+    NOOP --> AUDIT
+    FAIL --> AUDIT
+
+    AUDIT --> NOTIFY[Notify team in chat]
+```
+
 ---
 
 *This page is part of the MarkSync demo.*
