@@ -194,6 +194,8 @@ echo -e "${Y}▸ Step 4: marksync sync${N}"
 echo ""
 OUTPUT=$(bun "$MARKSYNC_SRC/src/cli/index.ts" sync 2>&1) || true
 
+echo "$OUTPUT"
+
 # Parse and display results
 python3 -c "
 import json, sys
