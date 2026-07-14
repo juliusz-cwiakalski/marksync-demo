@@ -40,14 +40,98 @@ graph LR
     B -->|content hash| D[(Yaml Lock File)]
 ```
 
-## Advanced Sync Flow (Mermaid)
+## mermaid kitchen sink
+
+### Class Diagram
 
 ```mermaid
-graph LR
-    A[Git Repo] -->|marksync sync| B(MarkSync CLI)
-    B -->|Storage XHTML| C[Confluence Cloud]
-    B -->|content hash| D[(XX Lock File)]
+classDiagram
+    class SyncCommand {
+        +String sourcePath
+        +String spaceKey
+        +run(): SyncResult
+    }
+
+    class MarkdownParser {
+        +parse(input): Document
+    }
+
+    class ConfluenceRenderer {
+        +render(doc): String
+    }
+
+    class SyncEngine {
+        +sync(cmd): SyncResult
+        -computeHash(content): String
+    }
+
+    class ConfluenceClient {
+        +getPage(id): Page
+        +updatePage(id, body): Page
+    }
+
+    class LockFileStore {
+        +read(uuid): LockEntry
+        +write(entry): void
+    }
+
+    SyncCommand --> SyncEngine : invokes
+    SyncEngine --> MarkdownParser : uses
+    SyncEngine --> ConfluenceRenderer : uses
+    SyncEngine --> ConfluenceClient : calls
+    SyncEngine --> LockFileStore : persists
 ```
+
+### Gantt Diagram
+
+```mermaid
+gantt
+    title MarkSync Release Plan
+    dateFormat  YYYY-MM-DD
+    axisFormat  %b %d
+
+    section Foundation
+    Requirements freeze        :done, req, 2026-07-01, 3d
+    CLI command scaffold       :done, cli, after req, 4d
+    Parser integration         :active, parser, after cli, 5d
+
+    section Sync Engine
+    Hash and dedup logic       :hash, after parser, 3d
+    Conflict detection         :conflict, after hash, 3d
+    Confluence API wiring      :api, after hash, 4d
+
+    section Validation
+    Integration tests          :test, after api, 4d
+    Dry-run in staging         :staging, after test, 2d
+    Production rollout         :milestone, rollout, after staging, 1d
+```
+
+### Mindmap Diagram
+
+```mermaid
+mindmap
+  root((MarkSync))
+    Inputs
+      Markdown files
+      Front matter
+      CLI flags
+    Core pipeline
+      Parse
+      Render
+      Hash
+      Compare lock
+      Update page
+    Safety
+      Version conflict detection
+      No silent overwrite
+      Dry run mode
+    Output
+      Confluence pages
+      Updated lock file
+      Sync report
+```
+
+
 
 ---
 

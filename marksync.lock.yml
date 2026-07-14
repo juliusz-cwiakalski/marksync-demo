@@ -6,16 +6,17 @@ targets:
         sourcePath: docs/hello-world.md
         pageId: "45088775"
         parentPageId: "39223464"
-        pageVersion: 11
-        sourceCommit: d0a6136be23e2102a1cd55de14c3a2ab5474e743
+        pageVersion: 13
+        sourceCommit: 7bcd1a7683f3367419a1cfa696a4ca628813cc90
         sourceContentHash: sha256:8ddc61796dbcab48f3964960d89ad1c080f07affbf8df50a8280753e7dc9c8f3
-        renderedBodyHash: db4acefe0fd04973c8344db1cd4621fe9d1ef1e1b90cbab49f114a94764146a7
-        remoteBodyHash: sha256:f7e057e5cf2c5c62ca41254c396fc4ddae23d49eb2558037534eca154643f794
+        renderedBodyHash: b3e23d23ad60352709a9ef49bc8b8ae1210c81bec5c0311cdf9c9fb2fc893a30
+        remoteBodyHash: sha256:d2cd635cf83ef003cad70abe3adaeea9642be053038b1d8d08025722dd5321b9
         attachmentHashes:
           marksync-mermaid-528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb.svg: 528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb
           marksync-mermaid-246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49.svg: 246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49
-        operationId: op_019f5f26-f895-7339-ab61-edd59d7bb967
-        synchronizedAt: 2026-07-14T05:43:38.579Z
+          marksync-mermaid-6a553653df717c5da7bde7be5e7a2db9487151cdd17eb249d480e9bf319bb8c6.svg: 6a553653df717c5da7bde7be5e7a2db9487151cdd17eb249d480e9bf319bb8c6
+        operationId: op_019f5f29-21da-72be-9f83-5d1360fe79f5
+        synchronizedAt: 2026-07-14T05:46:00.579Z
         toolVersion: 0.4.1
       019f5a2c-4a89-725f-aa59-9015713a0354:
         sourcePath: docs/team-guide.md
