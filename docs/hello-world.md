@@ -201,6 +201,27 @@ sequenceDiagram
     CLI-->>Dev: sync report
 ```
 
+### Git Graph Diagram
+
+```mermaid
+gitGraph
+    commit id: "init docs"
+    commit id: "add hello-world"
+    branch feature/mermaid
+    checkout feature/mermaid
+    commit id: "class + gantt"
+    commit id: "mindmap"
+    commit id: "state + timeline + sequence"
+    checkout main
+    merge feature/mermaid tag: "v1.0"
+    commit id: "add git graph"
+    branch hotfix/lockfile
+    checkout hotfix/lockfile
+    commit id: "fix lock hash"
+    checkout main
+    merge hotfix/lockfile tag: "v1.0.1"
+```
+
 
 
 ---
