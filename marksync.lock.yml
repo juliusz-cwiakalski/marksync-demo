@@ -71,3 +71,29 @@ targets:
         operationId: op_019f5d75-fd48-7429-b704-9e881e589026
         synchronizedAt: 2026-07-13T21:50:42.478Z
         toolVersion: 0.4.1
+      019f5f34-3724-76de-b657-422cc2dd748e:
+        sourcePath: docs/manual-test-1.md
+        pageId: "45318160"
+        parentPageId: "39223464"
+        pageVersion: 1
+        sourceCommit: 51556905dfe2f860483192213862825a24d45d22
+        sourceContentHash: sha256:b3b2d7729d70be8a9732d7646ca6c738b489bd060eae47170573a2e43c116fd5
+        renderedBodyHash: caaf20c758f149f1e557c7977896a7bf67860cede4f6818e2293a7ef6bc9c475
+        remoteBodyHash: sha256:5ac82a04be31b12b7f1c6f751945ed3ae807958cbc467aa0967eba8cf0381bc3
+        attachmentHashes: {}
+        operationId: op_019f5f34-4502-7367-9e21-acf8ddccccc0
+        synchronizedAt: 2026-07-14T05:58:10.907Z
+        toolVersion: 0.4.1
+      019f5f34-3725-70b0-b958-c0efd1fabc25:
+        sourcePath: docs/subfolder-example/subfolder-hello.md
+        pageId: "45580316"
+        parentPageId: "39223464"
+        pageVersion: 1
+        sourceCommit: 51556905dfe2f860483192213862825a24d45d22
+        sourceContentHash: sha256:f105a8dc1a8cca71255fd5782f9842c4e3537169ed3b169bc080981ee55df048
+        renderedBodyHash: 37d41107e3b9599023445a30665532bb18ab7516fd47c9eb82dc46ddf4c78470
+        remoteBodyHash: sha256:cc29e643db14a69306c66942d3c929e63a564764c8f070c384ba380d73cab22f
+        attachmentHashes: {}
+        operationId: op_019f5f34-4502-7367-9e21-acf8ddccccc0
+        synchronizedAt: 2026-07-14T05:58:12.546Z
+        toolVersion: 0.4.1
