@@ -105,3 +105,4 @@ static invert(String s) {
 |-------------------------|-----------------------------------------------------------------------|
 | MarkSync                | A CLI tool that synchronizes Git-tracked Markdown to Confluence Cloud |
 | MarkSync for Confluence | A CLI tool that synchronizes Git-tracked Markdown to Confluence Cloud |
+| A new row               | would that work after I did not commit the lock file?                 |
