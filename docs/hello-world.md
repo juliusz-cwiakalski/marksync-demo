@@ -17,7 +17,6 @@ to Confluence Cloud.
 
 ---
 
-<!-- TOC -->
 * [Hello World from MarkSync](#hello-world-from-marksync)
   * [Why MarkSync?](#why-marksync)
   * [Code Example](#code-example)
@@ -46,7 +45,6 @@ to Confluence Cloud.
   * [Live Update Section](#live-update-section)
   * [Manual update 2026-07-14](#manual-update-2026-07-14)
   * [Testing tables](#testing-tables)
-<!-- TOC -->
 
 ## Code Example
 
