@@ -222,6 +222,115 @@ gitGraph
     merge hotfix/lockfile tag: "v1.0.1"
 ```
 
+### Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    PAGE ||--o{ SYNC_RUN : "has"
+    PAGE ||--|| LOCK_ENTRY : "tracked by"
+    SPACE ||--o{ PAGE : "contains"
+    SYNC_RUN }o--|| USER : "triggered by"
+
+    SPACE {
+        string key PK
+        string name
+    }
+    PAGE {
+        string uuid PK
+        string title
+        string spaceKey FK
+        int version
+    }
+    LOCK_ENTRY {
+        string uuid PK
+        string contentHash
+        int syncedVersion
+    }
+    SYNC_RUN {
+        string id PK
+        datetime startedAt
+        string result
+    }
+    USER {
+        string id PK
+        string email
+    }
+```
+
+### User Journey Diagram
+
+```mermaid
+journey
+    title Author a doc with MarkSync
+    section Write
+      Draft Markdown in editor: 5: Author
+      Add front matter: 4: Author
+    section Review
+      Open pull request: 4: Author, Reviewer
+      Approve changes: 5: Reviewer
+    section Sync
+      Run marksync sync: 5: CI
+      Verify page in Confluence: 4: Author
+```
+
+### Pie Chart
+
+```mermaid
+pie showData
+    title Sync outcomes (last 100 runs)
+    "Updated" : 42
+    "NoOp (unchanged)" : 51
+    "Conflict" : 5
+    "Failed" : 2
+```
+
+### Quadrant Chart
+
+```mermaid
+quadrantChart
+    title Doc tooling landscape
+    x-axis Low automation --> High automation
+    y-axis Low control --> High control
+    quadrant-1 Ideal
+    quadrant-2 Manual but safe
+    quadrant-3 Avoid
+    quadrant-4 Risky automation
+    MarkSync: [0.8, 0.85]
+    Manual copy-paste: [0.15, 0.6]
+    Wiki WYSIWYG: [0.3, 0.3]
+    Ad-hoc scripts: [0.7, 0.25]
+```
+
+### Requirement Diagram
+
+```mermaid
+requirementDiagram
+    requirement deterministic_sync {
+        id: 1
+        text: Same input yields same Confluence output.
+        risk: high
+        verifymethod: test
+    }
+
+    requirement no_silent_overwrite {
+        id: 2
+        text: Never overwrite newer remote versions.
+        risk: high
+        verifymethod: test
+    }
+
+    element sync_engine {
+        type: component
+    }
+
+    element lock_store {
+        type: component
+    }
+
+    sync_engine - satisfies -> deterministic_sync
+    lock_store - satisfies -> no_silent_overwrite
+```
+
 
 
 ---
