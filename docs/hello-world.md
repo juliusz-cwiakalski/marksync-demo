@@ -98,3 +98,10 @@ static invert(String s) {
     return new StringBuilder(s).reverse().toString();
 }
 ```
+
+## Testing tables
+
+| Idea                    | Description                                                           |
+|-------------------------|-----------------------------------------------------------------------|
+| MarkSync                | A CLI tool that synchronizes Git-tracked Markdown to Confluence Cloud |
+| MarkSync for Confluence | A CLI tool that synchronizes Git-tracked Markdown to Confluence Cloud |

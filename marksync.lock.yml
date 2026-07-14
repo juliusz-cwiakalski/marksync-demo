@@ -6,15 +6,15 @@ targets:
         sourcePath: docs/hello-world.md
         pageId: "45088775"
         parentPageId: "39223464"
-        pageVersion: 2
-        sourceCommit: f326ef95eec8f6d40117a31bdca1040627eeb52b
+        pageVersion: 3
+        sourceCommit: e8bd9baccc9143e7431792b89d9c284ed565efb9
         sourceContentHash: sha256:8ddc61796dbcab48f3964960d89ad1c080f07affbf8df50a8280753e7dc9c8f3
-        renderedBodyHash: 7c0f8bc32e6ad85b6de113869966b131fab1b68545152c5a879b7cc558fe5cd8
-        remoteBodyHash: sha256:33b42535fe2b41d5aa8d380080d0d5cb90fd750e6437cd537083f48c26485e22
+        renderedBodyHash: f09f814590e405728acf81f9ad21a2d78bc362999e6c1976075878221ad19130
+        remoteBodyHash: sha256:e5aa1a193bf1148ff8caa9ef853468ab30ccd7c23e443b6c1bdcb8a1b3a000cb
         attachmentHashes:
           marksync-mermaid-528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb.svg: 528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb
-        operationId: op_019f5d75-e72f-71aa-b69e-336a7fcb1587
-        synchronizedAt: 2026-07-13T21:50:36.956Z
+        operationId: op_019f5ebe-d243-721d-ab19-cfb87a54e1eb
+        synchronizedAt: 2026-07-14T03:49:53.236Z
         toolVersion: 0.4.1
       019f5a2c-4a89-725f-aa59-9015713a0354:
         sourcePath: docs/team-guide.md
