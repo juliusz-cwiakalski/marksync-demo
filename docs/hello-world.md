@@ -131,6 +131,76 @@ mindmap
       Sync report
 ```
 
+### State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Parsed
+    Parsed --> Rendered : render XHTML
+    Rendered --> Hashed : compute content hash
+
+    Hashed --> Unchanged : hash matches lock
+    Hashed --> Changed : hash differs
+
+    Unchanged --> NoOp
+    NoOp --> [*]
+
+    Changed --> Conflict : remote version newer
+    Changed --> Updating : remote version matches
+
+    Conflict --> Aborted
+    Aborted --> [*]
+
+    Updating --> LockWritten : persist metadata
+    LockWritten --> [*]
+```
+
+### Timeline Diagram
+
+```mermaid
+timeline
+    title MarkSync Project Timeline
+    2026 Q1 : Idea and prototype
+            : Confluence API spike
+    2026 Q2 : First public CLI
+            : Content hash dedup
+            : Lock file format
+    2026 Q3 : Conflict detection
+            : Dry-run mode
+            : CI integration
+    2026 Q4 : GA release
+            : Team adoption
+```
+
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    actor Dev as Developer
+    participant CLI as MarkSync CLI
+    participant Engine as Sync Engine
+    participant API as Confluence API
+    participant Lock as Lock File
+
+    Dev->>CLI: marksync sync
+    CLI->>Engine: run(command)
+    Engine->>Engine: parse + render + hash
+    Engine->>Lock: read stored hash
+    Lock-->>Engine: previous hash
+
+    alt hash unchanged
+        Engine-->>CLI: NoOp (skipped)
+    else hash changed
+        Engine->>API: get current page version
+        API-->>Engine: version + body
+        Engine->>API: update page
+        API-->>Engine: new version
+        Engine->>Lock: write new hash + version
+    end
+
+    CLI-->>Dev: sync report
+```
+
 
 
 ---

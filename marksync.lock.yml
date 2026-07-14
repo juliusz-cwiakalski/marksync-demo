@@ -6,17 +6,20 @@ targets:
         sourcePath: docs/hello-world.md
         pageId: "45088775"
         parentPageId: "39223464"
-        pageVersion: 13
-        sourceCommit: 7bcd1a7683f3367419a1cfa696a4ca628813cc90
+        pageVersion: 14
+        sourceCommit: af3e4010205f5559264ae4b17baf4b34a634a58f
         sourceContentHash: sha256:8ddc61796dbcab48f3964960d89ad1c080f07affbf8df50a8280753e7dc9c8f3
-        renderedBodyHash: b3e23d23ad60352709a9ef49bc8b8ae1210c81bec5c0311cdf9c9fb2fc893a30
-        remoteBodyHash: sha256:d2cd635cf83ef003cad70abe3adaeea9642be053038b1d8d08025722dd5321b9
+        renderedBodyHash: 4356a141a9d1b10fed3791ecd1233c4d02b668a2170e15676b383b69994cdd4c
+        remoteBodyHash: sha256:a66ca7f408243955965dd516f810347f96d6b5ef5db76bd16268d8b7845386e8
         attachmentHashes:
           marksync-mermaid-528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb.svg: 528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb
           marksync-mermaid-246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49.svg: 246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49
           marksync-mermaid-6a553653df717c5da7bde7be5e7a2db9487151cdd17eb249d480e9bf319bb8c6.svg: 6a553653df717c5da7bde7be5e7a2db9487151cdd17eb249d480e9bf319bb8c6
-        operationId: op_019f5f29-21da-72be-9f83-5d1360fe79f5
-        synchronizedAt: 2026-07-14T05:46:00.579Z
+          marksync-mermaid-7b00971530db21602bfdee3868f4e538240c6fc47fc349c6e7caf8d343335713.svg: 7b00971530db21602bfdee3868f4e538240c6fc47fc349c6e7caf8d343335713
+          marksync-mermaid-03b6fc68f130b095e5c47d442723aa735ddc843f5b8c441d0ce11d9fdf77ef94.svg: 03b6fc68f130b095e5c47d442723aa735ddc843f5b8c441d0ce11d9fdf77ef94
+          marksync-mermaid-575b67e02ea6be2383d776a7ddef8c277b810604a08d043a66c358a04d953e10.svg: 575b67e02ea6be2383d776a7ddef8c277b810604a08d043a66c358a04d953e10
+        operationId: op_019f5f2b-7ee9-754e-a8b4-627ef46274e7
+        synchronizedAt: 2026-07-14T05:48:38.350Z
         toolVersion: 0.4.1
       019f5a2c-4a89-725f-aa59-9015713a0354:
         sourcePath: docs/team-guide.md
