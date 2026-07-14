@@ -6,11 +6,11 @@ targets:
         sourcePath: docs/hello-world.md
         pageId: "45088775"
         parentPageId: "39223464"
-        pageVersion: 22
-        sourceCommit: da93967d9623d650e836571faa7edaeed2e6064f
+        pageVersion: 23
+        sourceCommit: 750e10d0aedc843b33a801674cf853a9bd6ad2f2
         sourceContentHash: sha256:8ddc61796dbcab48f3964960d89ad1c080f07affbf8df50a8280753e7dc9c8f3
-        renderedBodyHash: 8d83178690e816e474a2160cb4c5038d31c4a1854089c52cf6f725e104d26a38
-        remoteBodyHash: sha256:d3ea56942bb045a55839fa9b61fc2d2334d0015eada6a4332cddb26ec061492b
+        renderedBodyHash: 102ec6cdff26cdf0cff34b9f30e7b1372df67512b7499f9c5484e2984dc27002
+        remoteBodyHash: sha256:5da7b3eba37c15e1f086ec26a444e55b6e25d072edd7d7fefde0944a1c59e2bb
         attachmentHashes:
           marksync-mermaid-528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb.svg: 528fe6cfa91fe4ba203a4463177f9e0220ba7cf8903e38c53d6ba1451ce58aeb
           marksync-mermaid-246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49.svg: 246bfe4ba5e0e058fafe6009ee461ed04906d762d2e1013711f80b60678efc49
@@ -45,8 +45,12 @@ targets:
           marksync-mermaid-339f1aff80604bfb6356f380c1e0501cabf72493c0a24ca04deab145143b919a.svg: 339f1aff80604bfb6356f380c1e0501cabf72493c0a24ca04deab145143b919a
           marksync-mermaid-4a71ac8cc71870222368a4e6f1142f7d80ffa1251b096228398df0a2d1e7493f.svg: 4a71ac8cc71870222368a4e6f1142f7d80ffa1251b096228398df0a2d1e7493f
           marksync-mermaid-32780d37752aee47553e2c7aae88a6ed14b0d9f4b41540c30dbcfaad9816e3ba.svg: 32780d37752aee47553e2c7aae88a6ed14b0d9f4b41540c30dbcfaad9816e3ba
-        operationId: op_019f5f38-b5d4-76e8-b4fa-23fb2f8ea743
-        synchronizedAt: 2026-07-14T06:03:10.027Z
+          marksync-mermaid-d78b68dccbbd14839e1bf4efedb799ca8938e3b1414b0298ddde03a6d3c87749.svg: d78b68dccbbd14839e1bf4efedb799ca8938e3b1414b0298ddde03a6d3c87749
+          marksync-mermaid-f5a2f4bb381f46379e07de29a39803d15d7e1a210038b49e2d3fe3426f426d3d.svg: f5a2f4bb381f46379e07de29a39803d15d7e1a210038b49e2d3fe3426f426d3d
+          marksync-mermaid-87c7217feee79b331492f51a75549c261cb0c9219dec6fce0e3be4e6bb8a6cf9.svg: 87c7217feee79b331492f51a75549c261cb0c9219dec6fce0e3be4e6bb8a6cf9
+          marksync-mermaid-dac81496eb9b3eaf4a3a7dd0a13bd6a4fe652c690a742bf27900084db22ae427.svg: dac81496eb9b3eaf4a3a7dd0a13bd6a4fe652c690a742bf27900084db22ae427
+        operationId: op_019f5f42-8429-769f-89b5-9ff3cd31fc28
+        synchronizedAt: 2026-07-14T06:13:52.812Z
         toolVersion: 0.4.1
       019f5a2c-4a89-725f-aa59-9015713a0354:
         sourcePath: docs/team-guide.md
