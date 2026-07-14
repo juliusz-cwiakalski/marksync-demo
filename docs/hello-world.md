@@ -31,15 +31,6 @@ function greet(name: string): string {
 | Bob    | Engineer  | Active   |
 | Carol  | Designer  | On leave |
 
-## Architecture Diagram (Mermaid)
-
-```mermaid
-graph LR
-    A[Git Repo] -->|marksync sync| B(MarkSync CLI)
-    B -->|Storage XHTML| C[Confluence Cloud]
-    B -->|content hash| D[(Yaml Lock File)]
-```
-
 ## Advanced Sync Flow (Mermaid)
 
 ```mermaid
@@ -65,6 +56,17 @@ flowchart TD
 
     AUDIT --> NOTIFY[Notify team in chat]
 ```
+
+## Architecture Diagram (Mermaid)
+
+```mermaid
+graph LR
+    A[Git Repo] -->|marksync sync| B(MarkSync CLI)
+    B -->|Storage XHTML| C[Confluence Cloud]
+    B -->|content hash| D[(Yaml Lock File)]
+```
+
+
 
 ---
 
