@@ -21,7 +21,7 @@ Source of this page is https://github.com/juliusz-cwiakalski/marksync-demo/blob/
 
 ```typescript
 function greet(name: string): string {
-  return `Hello, ${name}!`;
+    return `Hello, ${name}!`;
 }
 ```
 
@@ -77,11 +77,11 @@ classDiagram
         +write(entry): void
     }
 
-    SyncCommand --> SyncEngine : invokes
-    SyncEngine --> MarkdownParser : uses
-    SyncEngine --> ConfluenceRenderer : uses
-    SyncEngine --> ConfluenceClient : calls
-    SyncEngine --> LockFileStore : persists
+    SyncCommand --> SyncEngine: invokes
+    SyncEngine --> MarkdownParser: uses
+    SyncEngine --> ConfluenceRenderer: uses
+    SyncEngine --> ConfluenceClient: calls
+    SyncEngine --> LockFileStore: persists
 ```
 
 ### Gantt Diagram
@@ -89,48 +89,23 @@ classDiagram
 ```mermaid
 gantt
     title MarkSync Release Plan
-    dateFormat  YYYY-MM-DD
-    axisFormat  %b %d
+    dateFormat YYYY-MM-DD
+    axisFormat %b %d
 
     section Foundation
-    Requirements freeze        :done, req, 2026-07-01, 3d
-    CLI command scaffold       :done, cli, after req, 4d
-    Parser integration         :active, parser, after cli, 5d
+        Requirements freeze: done, req, 2026-07-01, 3d
+        CLI command scaffold: done, cli, after req, 4d
+        Parser integration: active, parser, after cli, 5d
 
     section Sync Engine
-    Hash and dedup logic       :hash, after parser, 3d
-    Conflict detection         :conflict, after hash, 3d
-    Confluence API wiring      :api, after hash, 4d
+        Hash and dedup logic: hash, after parser, 3d
+        Conflict detection: conflict, after hash, 3d
+        Confluence API wiring: api, after hash, 4d
 
     section Validation
-    Integration tests          :test, after api, 4d
-    Dry-run in staging         :staging, after test, 2d
-    Production rollout         :milestone, rollout, after staging, 1d
-```
-
-### Mindmap Diagram
-
-```mermaid
-mindmap
-  root((MarkSync))
-    Inputs
-      Markdown files
-      Front matter
-      CLI flags
-    Core pipeline
-      Parse
-      Render
-      Hash
-      Compare lock
-      Update page
-    Safety
-      Version conflict detection
-      No silent overwrite
-      Dry run mode
-    Output
-      Confluence pages
-      Updated lock file
-      Sync report
+        Integration tests: test, after api, 4d
+        Dry-run in staging: staging, after test, 2d
+        Production rollout: milestone, rollout, after staging, 1d
 ```
 
 ### State Diagram
@@ -138,22 +113,17 @@ mindmap
 ```mermaid
 stateDiagram-v2
     [*] --> Parsed
-    Parsed --> Rendered : render XHTML
-    Rendered --> Hashed : compute content hash
-
-    Hashed --> Unchanged : hash matches lock
-    Hashed --> Changed : hash differs
-
+    Parsed --> Rendered: render XHTML
+    Rendered --> Hashed: compute content hash
+    Hashed --> Unchanged: hash matches lock
+    Hashed --> Changed: hash differs
     Unchanged --> NoOp
     NoOp --> [*]
-
-    Changed --> Conflict : remote version newer
-    Changed --> Updating : remote version matches
-
+    Changed --> Conflict: remote version newer
+    Changed --> Updating: remote version matches
     Conflict --> Aborted
     Aborted --> [*]
-
-    Updating --> LockWritten : persist metadata
+    Updating --> LockWritten: persist metadata
     LockWritten --> [*]
 ```
 
@@ -162,15 +132,15 @@ stateDiagram-v2
 ```mermaid
 timeline
     title MarkSync Project Timeline
-    2026 Q1 : Idea and prototype
+    2026 Q1: Idea and prototype
             : Confluence API spike
-    2026 Q2 : First public CLI
+    2026 Q2: First public CLI
             : Content hash dedup
             : Lock file format
-    2026 Q3 : Conflict detection
+    2026 Q3: Conflict detection
             : Dry-run mode
             : CI integration
-    2026 Q4 : GA release
+    2026 Q4: GA release
             : Team adoption
 ```
 
@@ -183,24 +153,23 @@ sequenceDiagram
     participant Engine as Sync Engine
     participant API as Confluence API
     participant Lock as Lock File
-
-    Dev->>CLI: marksync sync
-    CLI->>Engine: run(command)
-    Engine->>Engine: parse + render + hash
-    Engine->>Lock: read stored hash
-    Lock-->>Engine: previous hash
+    Dev ->> CLI: marksync sync
+    CLI ->> Engine: run(command)
+    Engine ->> Engine: parse + render + hash
+    Engine ->> Lock: read stored hash
+    Lock -->> Engine: previous hash
 
     alt hash unchanged
-        Engine-->>CLI: NoOp (skipped)
+        Engine -->> CLI: NoOp (skipped)
     else hash changed
-        Engine->>API: get current page version
-        API-->>Engine: version + body
-        Engine->>API: update page
-        API-->>Engine: new version
-        Engine->>Lock: write new hash + version
+        Engine ->> API: get current page version
+        API -->> Engine: version + body
+        Engine ->> API: update page
+        API -->> Engine: new version
+        Engine ->> Lock: write new hash + version
     end
 
-    CLI-->>Dev: sync report
+    CLI -->> Dev: sync report
 ```
 
 ### Git Graph Diagram
@@ -228,10 +197,10 @@ gitGraph
 
 ```mermaid
 erDiagram
-    PAGE ||--o{ SYNC_RUN : "has"
-    PAGE ||--|| LOCK_ENTRY : "tracked by"
-    SPACE ||--o{ PAGE : "contains"
-    SYNC_RUN }o--|| USER : "triggered by"
+    PAGE ||--o{ SYNC_RUN: "has"
+    PAGE ||--|| LOCK_ENTRY: "tracked by"
+    SPACE ||--o{ PAGE: "contains"
+    SYNC_RUN }o--|| USER: "triggered by"
 
     SPACE {
         string key PK
@@ -265,42 +234,14 @@ erDiagram
 journey
     title Author a doc with MarkSync
     section Write
-      Draft Markdown in editor: 5: Author
-      Add front matter: 4: Author
+        Draft Markdown in editor: 5: Author
+        Add front matter: 4: Author
     section Review
-      Open pull request: 4: Author, Reviewer
-      Approve changes: 5: Reviewer
+        Open pull request: 4: Author, Reviewer
+        Approve changes: 5: Reviewer
     section Sync
-      Run marksync sync: 5: CI
-      Verify page in Confluence: 4: Author
-```
-
-### Pie Chart
-
-```mermaid
-pie showData
-    title Sync outcomes (last 100 runs)
-    "Updated" : 42
-    "NoOp (unchanged)" : 51
-    "Conflict" : 5
-    "Failed" : 2
-```
-
-### Quadrant Chart
-
-```mermaid
-quadrantChart
-    title Doc tooling landscape
-    x-axis Low automation --> High automation
-    y-axis Low control --> High control
-    quadrant-1 Ideal
-    quadrant-2 Manual but safe
-    quadrant-3 Avoid
-    quadrant-4 Risky automation
-    MarkSync: [0.8, 0.85]
-    Manual copy-paste: [0.15, 0.6]
-    Wiki WYSIWYG: [0.3, 0.3]
-    Ad-hoc scripts: [0.7, 0.25]
+        Run marksync sync: 5: CI
+        Verify page in Confluence: 4: Author
 ```
 
 ### Requirement Diagram
@@ -332,8 +273,6 @@ requirementDiagram
     sync_engine - satisfies -> deterministic_sync
     lock_store - satisfies -> no_silent_overwrite
 ```
-
-
 
 ---
 
