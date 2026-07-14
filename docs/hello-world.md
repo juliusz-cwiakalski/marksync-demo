@@ -37,7 +37,7 @@ function greet(name: string): string {
 graph LR
     A[Git Repo] -->|marksync sync| B(MarkSync CLI)
     B -->|Storage XHTML| C[Confluence Cloud]
-    B -->|content hash| D[(Lock File)]
+    B -->|content hash| D[(Yaml Lock File)]
 ```
 
 ## Advanced Sync Flow (Mermaid)
