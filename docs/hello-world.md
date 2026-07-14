@@ -5,7 +5,7 @@ marksync:
 
 # Hello World from MarkSync
 
-This page was published automatically by **MarkSync for Confluence** — a CLI tool that synchronizes Git-tracked Markdown
+This page was published automatically by **[MarkSync for Confluence](https://github.com/juliusz-cwiakalski/marksync)** — a CLI tool that synchronizes Git-tracked Markdown
 to Confluence Cloud.
 
 Source of this page is https://github.com/juliusz-cwiakalski/marksync-demo/blob/main/docs/hello-world.md
